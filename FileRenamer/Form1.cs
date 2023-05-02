@@ -26,11 +26,11 @@ namespace FileRenamer
         {
             string[] folders = (string[])e.Data.GetData(DataFormats.FileDrop);
 
-            string userInput = Microsoft.VisualBasic.Interaction.InputBox("Введи общее название для файлов:", "Название", "чёта", -1, -1);
+            string userInput = Microsoft.VisualBasic.Interaction.InputBox("Enter prefix:", "Prefix", "frog", -1, -1);
 
             DialogResult result = MessageBox.Show(
-            "уверена, бллин?",
-            "подтверждуха",
+            "Are you sure?",
+            "Confirmation",
             MessageBoxButtons.YesNo,
             MessageBoxIcon.Question);
 
@@ -40,7 +40,7 @@ namespace FileRenamer
                     {
                         FileProcessor.ProcessFolder(folderPath, userInput);
                     }
-                    MessageBox.Show("успех.", "удача.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Success.", "Ultra success.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             
         }
